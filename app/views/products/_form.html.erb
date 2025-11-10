@@ -1,11 +1,5 @@
 <%= form_with model: product do |form| %>
-  <% if form.object.errors.any? %>
-    <ul class='errors'>
-      <li class='error' style='color: red'>
-        <%= form.object.errors.full_messages.first %>
-      </li>
-    </ul>
-  <% end %>
+  <%= render "errors", errors: form.object.errors %>
 
   <div>
     <%= form.label :name %>
