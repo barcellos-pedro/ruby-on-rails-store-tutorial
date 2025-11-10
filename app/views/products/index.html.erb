@@ -1,7 +1,13 @@
-<h1>Products (<%= @products.size %>)</h1>
+<h1>
+  Products (<%= @products.size %>)
+</h1>
 
-<% @products.each do |product| %>
-  <p>
-    <%= product.name %>
-  </p>
-<% end %>
+<%= link_to "New Product", new_product_path %>
+
+<ul id='products'>
+  <% @products.each do |product| %>
+    <li>
+      <%= link_to product.name, product_path(product) %>
+    </li>
+  <% end %>
+</ul>
