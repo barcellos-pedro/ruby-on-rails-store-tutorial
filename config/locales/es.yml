@@ -1,4 +1,5 @@
 es:
+  hello: "Hola"
   products:
     index:
-      hello: "Hola"
+      title: "Producto"
