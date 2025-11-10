@@ -3,6 +3,10 @@
   <%= @product.description %>
 <% end %>
 
+<% if @product.featured_image.attached? %>
+  <%= image_tag @product.featured_image, style: "margin-top: 1em" %>
+<% end %>
+
 <div style="margin-top: 1em; display: flex; gap: 1em">
   <%= link_to "Back", products_path %>
 
