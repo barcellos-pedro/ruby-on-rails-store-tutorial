@@ -1,8 +1,9 @@
 <% cache @product do %>
   <h1><%= @product.name %></h1>
+  <%= @product.description %>
 <% end %>
-<div style="display: flex; gap: 1em">
 
+<div style="margin-top: 1em; display: flex; gap: 1em">
   <%= link_to "Back", products_path %>
 
   <% if authenticated? %>
