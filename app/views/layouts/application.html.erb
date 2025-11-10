@@ -25,6 +25,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav
+      style="display: flex; gap: 1em; justify-content: center; align-items:center; margin-top: 1em"
+    >
+      <%= link_to "Home", root_path %>
+      <%= link_to "Login", new_session_path unless authenticated? %>
+      <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+    </nav>
+
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
