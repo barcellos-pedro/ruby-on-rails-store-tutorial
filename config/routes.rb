@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   resource :sign_up
 
+  namespace :settings do
+    resource :password, only: [ :show, :update ]
+  end
+
   resources :products do
     resources :subscribers, only: [ :create ]
   end
